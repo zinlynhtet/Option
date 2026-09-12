@@ -2,8 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-v0_8-darkgrid')
 def call_payoff(sT, strike_price, premium):
-    pnl = np.where(sT > strike_price, sT - strike_price, 0) - premium
-    return pnl
+    return np.where(sT > strike_price, sT - strike_price, 0) - premium
 
 spot_price = 900 
 strike_price = 900 
